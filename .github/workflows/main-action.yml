@@ -1,6 +1,7 @@
 name: Acciojob Tests
 
-on: workflow_dispatch
+on: 
+  workflow_call:
 
 
 jobs:
