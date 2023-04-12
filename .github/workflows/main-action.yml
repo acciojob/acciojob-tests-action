@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checking Question Type
         id: checkingQuestionType
-        uses: acciojob/checking-question-type-action@latest
+        uses: acciojob/checking-question-type-action@main
         env:
           ACCIO_ASGMNT_ACTION_TOKEN: ${{ secrets.ACCIO_ASGMNT_ACTION_TOKEN }}
           ACCIOJOB_BACKEND_URL: ${{ vars.ACCIOJOB_BACKEND_URL }}
@@ -34,7 +34,7 @@ jobs:
           ls ${{ github.workspace }}
       - name: Acciojob Assignment Action
         id: assignmentAction
-        uses: acciojob/assignment-action@latest
+        uses: acciojob/assignment-action@main
         env:
           ACCIO_ASGMNT_ACTION_TOKEN: ${{ secrets.ACCIO_ASGMNT_ACTION_TOKEN }}
           ACCIOJOB_BACKEND_URL: ${{ vars.ACCIOJOB_BACKEND_URL }}
@@ -54,7 +54,7 @@ jobs:
           cache: maven
       - name: Junit Assignment Action
         id: assignmentAction
-        uses: acciojob/junit-github-action@latest
+        uses: acciojob/junit-github-action@main
         env:
           ACCIO_ASGMNT_ACTION_TOKEN: ${{ secrets.ACCIO_ASGMNT_ACTION_TOKEN }}
           ACCIOJOB_BACKEND_URL: ${{ vars.ACCIOJOB_BACKEND_URL }}
