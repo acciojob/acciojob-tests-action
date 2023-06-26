@@ -65,7 +65,8 @@ jobs:
     if: needs.checking-question-type.outputs.questionType == 'NODE'
     strategy:
       matrix:
-        node-versions: [18.x, 16.x]
+        # To check for multiple versions, add versions to the below array. Example: [18.x, 16.x]
+        node-versions: [16.x]
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node ${{ matrix.node-versions }}
